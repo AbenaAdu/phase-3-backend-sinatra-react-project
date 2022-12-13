@@ -1,5 +1,9 @@
-puts "🌱 Seeding spices..."
+puts "🌱 Destroying characters, arena, events..."
+Character.destroy_all
+Arena.destroy_all
+Event.destroy_all
 
+puts "🌱 Seeding characters..."
 first_character = Character.create(name: 'Carl', alignment: 'villain', catchphrase:'I will burn the world to the ground!', personality: 'hot-tempered', strength: 'problem solving', weakness: 'water', background:'Hero parent who deserted him.')
 second_character = Character.create(name: 'Blaze', alignment: 'hero', catchphrase:'I enjoy eating pizza', personality: 'mild-mannered', strength: 'people person', weakness: 'indecisive', background:'The son of Carl')
 third_character = Character.create(name: 'Sir Dominoes', alignment: 'hero', catchphrase:'Did someone order takeout?!', personality: 'energetic', strength: 'provider', weakness: 'people with no money', background:'Growing up on the dark plains of Pizza Hut')
